@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Persomaid 🎮 | 出会いを、キャラクターに。</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#44d8f1",
+              "surface-tint": "#6635e9",
+              "on-primary-fixed": "#1f0060",
+              "on-secondary-fixed-variant": "#4b3988",
+              "background": "#faf8ff",
+              "secondary": "#6352a2",
+              "primary-fixed": "#e7deff",
+              "surface-container-low": "#f4f3fb",
+              "on-surface-variant": "#494455",
+              "on-secondary": "#ffffff",
+              "surface-container": "#eeedf5",
+              "on-background": "#1a1b21",
+              "outline": "#7a7487",
+              "on-secondary-fixed": "#1f035c",
+              "on-primary-fixed-variant": "#4e00d2",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e2e2e9",
+              "on-tertiary-fixed": "#001f25",
+              "tertiary-container": "#007e8f",
+              "outline-variant": "#cac3d8",
+              "on-tertiary-container": "#edfcff",
+              "secondary-fixed-dim": "#ccbdff",
+              "inverse-primary": "#ccbdff",
+              "surface-dim": "#dad9e1",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#ccbdff",
+              "inverse-on-surface": "#f1f0f8",
+              "secondary-fixed": "#e7deff",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#a1efff",
+              "surface": "#faf8ff",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#1a1b21",
+              "secondary-container": "#baa7fe",
+              "surface-bright": "#faf8ff",
+              "on-error": "#ffffff",
+              "primary-container": "#7b4fff",
+              "on-primary-container": "#fdf8ff",
+              "primary": "#622fe5",
+              "surface-container-highest": "#e2e2e9",
+              "on-tertiary-fixed-variant": "#004e59",
+              "surface-container-high": "#e8e7ef",
+              "inverse-surface": "#2f3036",
+              "on-error-container": "#93000a",
+              "tertiary": "#006371",
+              "on-secondary-container": "#4a3887"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            boxShadow: {
+              'rpg': '0 4px 24px rgba(123, 79, 255, 0.12)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
+      .bg-glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+      .text-gradient { background: linear-gradient(to right, #7B4FFF, #00BCD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .hero-gradient-text { background: linear-gradient(to right, #622fe5, #006371); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-[#E5DCFF] dark:border-purple-900/30 shadow-[0_2px_20px_rgba(123,79,255,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold bg-gradient-to-r from-[#7B4FFF] to-[#00BCD4] bg-clip-text text-transparent font-headline tracking-tight">Persomaid 🎮</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#622fe5] dark:text-[#7B4FFF] font-bold border-b-2 border-[#622fe5] transition-colors" href="#">利用規約</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#622fe5] dark:hover:text-[#7B4FFF] transition-colors" href="#">プライバシーポリシー</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold shadow-rpg hover:opacity-80 scale-95 transition-all text-sm">Download</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden px-6 lg:px-20 py-12 lg:py-0">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left Content -->
+<div class="space-y-10 z-10">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold text-xs tracking-widest uppercase font-label">
+                        PERSONA MANAGEMENT
+                    </span>
+<h1 class="font-headline font-bold text-5xl lg:text-7xl leading-tight tracking-tighter text-on-background">
+                        出会いを、<span class="text-gradient">キャラクター</span>に。
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        ゲームのキャラメイク感覚で、あなたの出会いを詳細に記録。すべてのデータはデバイス内に、完全プライベートで。
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary hover:opacity-90 text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-3 shadow-rpg transition-all group h-[64px] min-w-[240px] justify-center">
+<span class="material-symbols-outlined" data-icon="apple">ios</span>
+                            App Store でダウンロード
+                        </button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant/30 text-on-surface px-8 py-4 rounded-full font-bold flex items-center gap-3 transition-all hover:border-primary/50 group h-[64px] min-w-[240px] justify-center">
+<span class="material-symbols-outlined" data-icon="google_play">play_apps</span>
+                            Google Play でダウンロード
+                        </button>
+</div>
+<div class="flex flex-wrap gap-3 pt-6">
+<div class="bg-surface-container-lowest border border-[#E5DCFF] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="shield_lock" data-weight="fill">shield_lock</span>
+<span class="text-sm font-medium">100% オフライン</span>
+</div>
+<div class="bg-surface-container-lowest border border-[#E5DCFF] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_awesome" data-weight="fill">auto_awesome</span>
+<span class="text-sm font-medium">RPG風 UI/UX</span>
+</div>
+<div class="bg-surface-container-lowest border border-[#E5DCFF] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="database_off" data-weight="fill">database_off</span>
+<span class="text-sm font-medium">会員登録不要</span>
+</div>
+</div>
+</div>
+<!-- Right Content: Mockup -->
+<div class="relative flex justify-center items-center">
+<!-- Background blobs -->
+<div class="absolute w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<!-- Phone Frame -->
+<div class="relative w-[320px] h-[650px] bg-white rounded-[3rem] p-4 shadow-rpg border-[8px] border-white ring-1 ring-slate-100 overflow-hidden">
+<div class="w-full h-full bg-surface-container-low rounded-[2rem] overflow-hidden relative flex flex-col">
+<!-- In-App Mockup Content -->
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-center">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="person_add">person_add</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest"></div>
+</div>
+<div class="space-y-4">
+<div class="h-4 w-2/3 bg-surface-container-highest rounded-full"></div>
+<div class="h-64 w-full rounded-2xl bg-surface-container-lowest shadow-sm p-4 flex flex-col items-center justify-center text-center space-y-4">
+<div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-primary-fixed overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a young person with soft studio lighting and a clean pastel background for a character profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZ57V2cwhi8Q7H03hVvTiYC_-SjqpRMVtRi5iZPWU7OAO9J1ws6wFqsUBo4gnSQ5m_YNC8MlXf7uaJrQehxJtaNjB4_KgZs5sdpguD0HrwaupHOUqYjuFH5E3kOha1hUUKixuq2mX5l4OwygvP1zpHa3y6uSIN7URjimuKMp_4b8edMZ1VpRzfxydD-dc0OGGTdRW3PWsnfCMgMvKC9zFYNdOQwtJZAng47O1TvNCJWXp5pKm5oi0W0OF7qBkQdXfDOhHtyMcu5Q"/>
+</div>
+<div class="space-y-2 w-full">
+<div class="h-3 w-1/2 bg-slate-100 rounded-full mx-auto"></div>
+<div class="h-2 w-3/4 bg-slate-50 rounded-full mx-auto"></div>
+</div>
+<!-- Tactical Stats -->
+<div class="w-full grid grid-cols-2 gap-2 pt-2">
+<div class="h-1 bg-primary rounded-full"></div>
+<div class="h-1 bg-tertiary rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-primary-fixed rounded-full"></div>
+</div>
+</div>
+<!-- Cards floating out -->
+<div class="h-20 w-full rounded-xl bg-primary-container p-4 flex items-center gap-4 text-on-primary shadow-lg translate-x-4">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<div class="space-y-1">
+<div class="h-2 w-20 bg-white/30 rounded-full"></div>
+<div class="h-3 w-32 bg-white/50 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Elements -->
+<div class="absolute top-10 -right-4 bg-white p-4 rounded-2xl shadow-rpg border border-slate-50 animate-bounce transition-transform duration-1000">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="videogame_asset">videogame_asset</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Modes Section -->
+<section class="bg-surface-container-lowest py-24 px-6 relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-headline font-bold tracking-widest text-primary uppercase text-sm">Features</span>
+</div>
+<h2 class="font-headline font-bold text-4xl lg:text-5xl text-on-surface">5つの作成モード</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<!-- Bento Grid Layout -->
+<!-- Card 1: Scout -->
+<div class="md:col-span-2 bg-white rounded-lg p-8 shadow-rpg border-l-4 border-[#FF9500] hover:-translate-y-1 transition-all">
+<div class="text-4xl mb-4">⚡</div>
+<h3 class="font-headline font-bold text-xl mb-2">スカウター</h3>
+<p class="text-on-surface-variant leading-relaxed">短時間でサクッとスキャン。第一印象や最低限のステータスを即座に記録します。</p>
+</div>
+<!-- Card 2: Quest -->
+<div class="md:col-span-2 bg-white rounded-lg p-8 shadow-rpg border-l-4 border-[#00C853] hover:-translate-y-1 transition-all">
+<div class="text-4xl mb-4">🗡</div>
+<h3 class="font-headline font-bold text-xl mb-2">クエスト</h3>
+<p class="text-on-surface-variant leading-relaxed">会話をミッションに変える。相手の話した内容をタスクや達成目標としてアーカイブ。</p>
+</div>
+<!-- Card 3: Character Make -->
+<div class="md:col-span-2 bg-white rounded-lg p-8 shadow-rpg border-l-4 border-[#7B4FFF] hover:-translate-y-1 transition-all">
+<div class="text-4xl mb-4">🎮</div>
+<h3 class="font-headline font-bold text-xl mb-2">キャラメイク</h3>
+<p class="text-on-surface-variant leading-relaxed">全項目をじっくり入力。外見、スキル、性格、背景まで完璧なプロファイルを作成。</p>
+</div>
+<!-- Card 4: Profiling -->
+<div class="md:col-span-3 bg-white rounded-lg p-8 shadow-rpg border-l-4 border-[#F44336] hover:-translate-y-1 transition-all">
+<div class="text-4xl mb-4">🔍</div>
+<h3 class="font-headline font-bold text-xl mb-2">プロファイリング</h3>
+<p class="text-on-surface-variant leading-relaxed">事前情報を機密ファイルに整理。対面前にわかっているデータを集約し、戦略的な出会いを支援。</p>
+</div>
+<!-- Card 5: Guild -->
+<div class="md:col-span-3 bg-white rounded-lg p-8 shadow-rpg border-l-4 border-[#00BCD4] hover:-translate-y-1 transition-all">
+<div class="text-4xl mb-4">🏰</div>
+<h3 class="font-headline font-bold text-xl mb-2">ギルド</h3>
+<p class="text-on-surface-variant leading-relaxed">チームをまとめて編成。コミュニティや組織ごとにキャラクターをグループ分けして管理。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Trust Section -->
+<section class="bg-[#F0EEFF] py-24 px-6 overflow-hidden">
+<div class="max-w-5xl mx-auto text-center space-y-16">
+<div class="space-y-6">
+<div class="w-20 h-20 bg-primary rounded-[2rem] mx-auto flex items-center justify-center shadow-lg transform rotate-12">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="shield" data-weight="fill">shield</span>
+</div>
+<h2 class="font-headline font-bold text-3xl lg:text-5xl text-on-surface">あなたのデータは、<br class="md:hidden"/>あなただけのもの。</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">
+                        プライバシーは機能ではなく、私たちの基礎です。外部サーバーとの通信は一切行われません。
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Privacy Card 1 -->
+<div class="bg-white p-10 rounded-lg shadow-rpg flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="text-3xl">📵</span>
+</div>
+<h3 class="font-headline font-bold text-lg">サーバーレス</h3>
+<p class="text-sm text-on-surface-variant">クラウドとは無縁。すべてローカル完結。バックアップも自分の好きな場所へ。</p>
+</div>
+<!-- Privacy Card 2 -->
+<div class="bg-white p-10 rounded-lg shadow-rpg flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="text-3xl">🔒</span>
+</div>
+<h3 class="font-headline font-bold text-lg">収集ゼロ</h3>
+<p class="text-sm text-on-surface-variant">個人情報・分析・トラッキング、一切なし。私たちがあなたのデータを見ることは不可能です。</p>
+</div>
+<!-- Privacy Card 3 -->
+<div class="bg-white p-10 rounded-lg shadow-rpg flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="text-3xl">🗑</span>
+</div>
+<h3 class="font-headline font-bold text-lg">完全削除</h3>
+<p class="text-sm text-on-surface-variant">アンインストールで、データは跡形もなく消える。迷わず、安心して試せます。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 px-6 text-center">
+<div class="max-w-4xl mx-auto bg-primary rounded-[3rem] p-12 lg:p-20 text-on-primary shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline font-bold text-4xl lg:text-5xl leading-tight">冒険の準備は、<br/>できていますか？</h2>
+<p class="text-on-primary-container/80 text-lg max-w-xl mx-auto">
+                        今すぐ Persomaid をダウンロードして、新しい管理体験を始めましょう。
+                    </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-white text-primary px-10 py-5 rounded-full font-bold shadow-lg hover:scale-105 transition-all h-[64px]">
+                            Download on App Store
+                        </button>
+<button class="bg-primary-container border border-on-primary/20 text-on-primary px-10 py-5 rounded-full font-bold hover:bg-primary-container/80 transition-all h-[64px]">
+                            Get it on Google Play
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 w-full py-8 mt-auto border-t border-[#E5DCFF] dark:border-purple-900/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+<div class="text-lg font-bold bg-gradient-to-r from-[#7B4FFF] to-[#00BCD4] bg-clip-text text-transparent font-headline">Persomaid 🎮</div>
+<div class="flex gap-8 text-sm font-['Manrope']">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#622fe5] dark:hover:text-[#7B4FFF] transition-all duration-200 hover:underline" href="#">利用規約</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#622fe5] dark:hover:text-[#7B4FFF] transition-all duration-200 hover:underline" href="#">プライバシーポリシー</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#622fe5] dark:hover:text-[#7B4FFF] transition-all duration-200 hover:underline" href="#">お問い合わせ</a>
+</div>
+<div class="text-slate-500 dark:text-slate-400 text-sm font-['Manrope']">
+                © Persomaid. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

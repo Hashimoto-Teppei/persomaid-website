@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Persomaid - 出会いを、キャラクターに。</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#494455",
+              "on-surface": "#1a1b21",
+              "primary-fixed": "#e7deff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#42426f",
+              "inverse-surface": "#2f3036",
+              "on-error": "#ffffff",
+              "surface-tint": "#6635e9",
+              "surface-container-high": "#e8e7ef",
+              "on-secondary-fixed-variant": "#004e59",
+              "surface-container": "#eeedf5",
+              "secondary-fixed": "#a1efff",
+              "on-tertiary-fixed": "#161640",
+              "on-primary-container": "#fdf8ff",
+              "inverse-primary": "#ccbdff",
+              "on-tertiary-container": "#fbf8ff",
+              "secondary": "#006876",
+              "surface-container-highest": "#e2e2e9",
+              "on-secondary-fixed": "#001f25",
+              "tertiary": "#555683",
+              "on-primary": "#ffffff",
+              "background": "#faf8ff",
+              "surface": "#faf8ff",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#cac3d8",
+              "primary-fixed-dim": "#ccbdff",
+              "tertiary-fixed": "#e2dfff",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e2e2e9",
+              "inverse-on-surface": "#f1f0f8",
+              "secondary-container": "#58e6ff",
+              "outline": "#7a7487",
+              "surface-container-low": "#f4f3fb",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#006573",
+              "on-background": "#1a1b21",
+              "surface": "#faf8ff",
+              "primary-container": "#7b4fff",
+              "on-primary-fixed": "#1f0060",
+              "secondary-fixed-dim": "#44d8f1",
+              "tertiary-container": "#6e6e9d",
+              "primary": "#622fe5",
+              "tertiary-fixed-dim": "#c3c2f6",
+              "surface-dim": "#dad9e1",
+              "on-primary-fixed-variant": "#4e00d2",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #faf8ff; color: #1a1b21; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
+        .persona-gradient-text { background: linear-gradient(135deg, #622fe5 0%, #58e6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border-b border-[#E5DCFF] dark:border-slate-800 shadow-[0_12px_32px_rgba(98,47,229,0.08)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#622fe5] text-3xl" data-icon="sports_esports">sports_esports</span>
+<span class="text-2xl font-bold bg-gradient-to-r from-[#622fe5] to-[#58e6ff] bg-clip-text text-transparent font-['Space_Grotesk'] tracking-tight">Persomaid</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-['Space_Grotesk'] font-bold tracking-tight hover:text-[#622fe5] transition-colors duration-300" href="#">利用規約</a>
+<a class="text-slate-600 dark:text-slate-400 font-['Space_Grotesk'] font-bold tracking-tight hover:text-[#622fe5] transition-colors duration-300" href="#">プライバシーポリシー</a>
+<button class="scale-95 active:scale-90 transition-transform bg-primary text-white px-6 py-2 rounded-full font-bold shadow-lg shadow-primary/20">
+                    Get Started
+                </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-background" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 md:px-20 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left Content -->
+<div class="flex flex-col items-start gap-8">
+<div class="px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold tracking-widest font-headline">
+                        PERSONA MANAGEMENT
+                    </div>
+<h1 class="text-6xl md:text-[72px] font-headline font-bold leading-[1.1] tracking-tight text-on-background">
+                        出会いを、<br/>
+<span class="persona-gradient-text">キャラクター</span>に。
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Persomaidは、あなたの日常の出会いをRPGのような冒険へと変える、プライバシー重視のペルソナ管理アプリです。オフライン完結の安全性と、ゲームのようなワクワクする体験を。
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="group relative bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="apple">ios</span>
+<span class="font-bold">App Store でダウンロード</span>
+</button>
+<button class="group border-2 border-outline-variant hover:border-primary text-on-surface px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+<span class="font-bold">Google Play でダウンロード</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-3 mt-4">
+<span class="px-4 py-2 bg-primary-fixed/30 text-primary border border-primary-fixed rounded-full text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="offline_bolt">offline_bolt</span> 完全オフライン
+                        </span>
+<span class="px-4 py-2 bg-secondary-container/20 text-secondary border border-secondary-container rounded-full text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="shield_person">shield_person</span> データ収集ゼロ
+                        </span>
+<span class="px-4 py-2 bg-primary-fixed/30 text-primary border border-primary-fixed rounded-full text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="layers">layers</span> 5つの作成モード
+                        </span>
+</div>
+</div>
+<!-- Right Content: Phone Mockup -->
+<div class="relative flex justify-center items-center">
+<!-- Background Decoration -->
+<div class="absolute w-[120%] h-[120%] bg-gradient-to-tr from-primary/10 to-secondary-container/10 rounded-full blur-3xl -z-10"></div>
+<div class="relative w-72 md:w-80 h-[600px] bg-on-surface rounded-[3rem] border-[10px] border-on-surface shadow-2xl overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-on-surface rounded-b-2xl z-20"></div>
+<div class="w-full h-full bg-background p-4 flex flex-col gap-4 overflow-y-auto">
+<!-- In-app Persona Card Example -->
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm border border-outline-variant/15 flex flex-col gap-3">
+<div class="w-full aspect-[4/5] rounded-lg overflow-hidden relative">
+<img alt="Character Avatar" class="w-full h-full object-cover" data-alt="3D stylized high-fidelity avatar of a futuristic cyberpunk character with soft glowing neon accents and purple hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99iUbP6Mt6BUWcwsNm7XAhYkBdLCKw2icEh0T7ijiasTZepvWXwEb80Bn8ePU6Pvgs2O-i58eCcotaLLNvRNpak8PjtgVgUqVE_U4V9c10llvgiFqD5qwyofR_MVNhKoBT4RTEpgra0NQZwBeK-dB87-hjXWgORY8wdgWSwN4jPwWVjZW8AnFhYNhLO4J7WeYBWEkCPg12-pfAc5PASdJZxgScP5q8x3DAZKqj7czKSICehv4-rgY3vDOJiY5M36ktmeGVed3gBM"/>
+<div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-bold">
+                                        Lv.42 TECH-MAGE
+                                    </div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Alex River</h3>
+<p class="text-xs text-on-surface-variant">Creative Strategist | Web3</p>
+</div>
+<div class="flex gap-2">
+<div class="h-1 flex-1 bg-secondary rounded-full"></div>
+<div class="h-1 flex-1 bg-primary rounded-full"></div>
+<div class="h-1 flex-1 bg-surface-variant rounded-full"></div>
+</div>
+</div>
+<!-- Small Card Example -->
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm border border-outline-variant/15 flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0">
+<img alt="Mini Avatar" class="w-full h-full object-cover" data-alt="close-up of a high-end 3D animated character portrait with realistic lighting and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt26m-7ZmItcL5pf75boeH8QHnN6HTa6S88Bd5IIiAZBEQQpfp_5vlqaMeb6fJEwOF2CsCNcI6rQDDMzno4A9SqmgG7oSifdv1QAXFt_ogaR6wh-myoFiIipBovrRpEh_D6DVVkZFTLLyJ7tiumsfNVLY51pgLNeBz0XzRLkLbAPAPAuipLWWJmOYMW1iBGjTr-uUWV4jgCm29oJDwGoZgLV6p-TPygh2VZM66DkxzyKzIgvBVgUre0of2FBIKfM9stCo0Yg437m0"/>
+</div>
+<div class="flex-1">
+<div class="font-headline font-bold text-sm">Elena Vance</div>
+<div class="text-[10px] text-on-surface-variant italic">The Silent Rogue</div>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modes Section -->
+<section class="py-24 px-8 md:px-20 bg-surface">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-center mb-16 text-on-background">5つの作成モード</h2>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto md:h-[600px]">
+<!-- Mode 1: Scouter -->
+<div class="md:col-span-2 group bg-surface-container-lowest rounded-lg border border-[#E5DCFF] p-8 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-500 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#FF9500]"></div>
+<div>
+<span class="material-symbols-outlined text-[#FF9500] text-4xl mb-4" data-icon="bolt">bolt</span>
+<h3 class="text-2xl font-bold font-headline mb-3">⚡ スカウター</h3>
+<p class="text-on-surface-variant leading-relaxed">一瞬の出会いを逃さない。QRコードやNFCで、相手の情報を瞬時にキャラクターとして登録。</p>
+</div>
+<div class="mt-8 transform group-hover:scale-105 transition-transform">
+<img alt="Scouter Mode" class="rounded-lg shadow-lg" data-alt="high-tech orange digital scanner interface with particle effects on a sleek modern background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8-rYiDZilPLcQ444vt9XA8qo1kNNPt9v7UJfkJlsny4be0_H7oJVyeH6nAlutbqmVQpMN_YKeLAcbfTFpdsbhnR6QmnDn7GUWq3twQF0CxXOLuRVT11d1IrOn-3FjtH5Tk5NThUNZly9H8Y7JrVssWYFp_IWMSyTykQdNWR60ZWhQv8KbOYBqlqPw1m_ScVYAX31G_oikJemAiVGkh7zb8o9ZujHOZae1ZNA-4m9pvzuP9iWDFKfcJHVARKF-HWM2Vcyq-RpTXbE"/>
+</div>
+</div>
+<!-- Mode 2: Quest -->
+<div class="md:col-span-2 group bg-surface-container-lowest rounded-lg border border-[#E5DCFF] p-8 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-500 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#00C853]"></div>
+<div>
+<span class="material-symbols-outlined text-[#00C853] text-4xl mb-4" data-icon="sword">swords</span>
+<h3 class="text-2xl font-bold font-headline mb-3">🗡 クエスト</h3>
+<p class="text-on-surface-variant leading-relaxed">質問に答えていくアドベンチャー形式。会話を楽しみながら、深いプロファイルを作成。</p>
+</div>
+<div class="mt-8 transform group-hover:scale-105 transition-transform">
+<img alt="Quest Mode" class="rounded-lg shadow-lg" data-alt="concept art of a glowing emerald sword in a pixelated fantasy forest environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRpr1OijI7URq2VNPi-EEIkfo0IOjdQ5qmvlGkmPHUv5llXGkbVr1iuChahHNpCSCBfDNIcawEtoUaJlGFDDEHp1jvn6gW7ZPCWNORorw72qrmGihqQNXIr6gkebrMaT5k2WZnnAsxpH9iHlFhFvkdEONhaKMc5rmQabjHpHoOeyzBhA5_fLHa8ewHHDjaRBjj-33tcxzeLL1AuqChHKaOaSVa9cM1u9ypiNovUfrmVlMy0SM9_zLvDWQU0AH5H_qQKsGNipBsC6Q"/>
+</div>
+</div>
+<!-- Mode 3: CharMake -->
+<div class="md:col-span-2 group bg-surface-container-lowest rounded-lg border border-[#E5DCFF] p-8 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-500 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#7B4FFF]"></div>
+<div>
+<span class="material-symbols-outlined text-[#7B4FFF] text-4xl mb-4" data-icon="videogame_asset">videogame_asset</span>
+<h3 class="text-2xl font-bold font-headline mb-3">🎮 キャラメイク</h3>
+<p class="text-on-surface-variant leading-relaxed">外見、属性、スキルセットを自由にカスタマイズ。あなたの理想を形にする究極の編集モード。</p>
+</div>
+<div class="mt-8 transform group-hover:scale-105 transition-transform">
+<img alt="CharMake Mode" class="rounded-lg shadow-lg" data-alt="abstract violet glowing game controller with energy flows and futuristic interface elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOO2RiEzsTd494_4j-wqkWnqvyjtOqAq_0omXL-s0D6Pd8rviUMufL-CrTYuWTzrU0LNTARrM6LAmld1Gw6yhDe9uRWyyv81wcp9U-6ccuSNtCQ_vBUCszVI2DuiLL3m6sUOOUxLV_H_jS169gv4xG8k6jW25KY5IrUXsH9WK4Ucjcd7lPpNIu7ZB5Y6WpTWUidEZfCafBWNBzpWOD1bgxOEbQ7Udb_bPKt63XY_mmEeOVQiYvNlUmcZk_jWF0gTn_Y97O9mBWqv8"/>
+</div>
+</div>
+<!-- Mode 4: Profiling -->
+<div class="md:col-span-3 group bg-surface-container-lowest rounded-lg border border-[#E5DCFF] p-8 shadow-sm flex flex-col md:flex-row gap-8 hover:shadow-xl transition-all duration-500 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#F44336]"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-[#F44336] text-4xl mb-4" data-icon="search">search</span>
+<h3 class="text-2xl font-bold font-headline mb-3">🔍 プロファイリング</h3>
+<p class="text-on-surface-variant leading-relaxed">既存のSNSやメモから、AIがペルソナの断片を収集・分析。多角的な視点でキャラクターを構築。</p>
+</div>
+<div class="w-full md:w-48 transform group-hover:translate-x-2 transition-transform">
+<img alt="Profiling Mode" class="rounded-lg h-full object-cover" data-alt="red digital data analysis visualization with interconnected nodes and glowing circuits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs1jLP5eJfMKD1uddaypOM8W5DgmPwbRdIudng_MrOmo45-nAahqgalMb6ECc8RTgAnnBh6s3P5DUfLWP8b1twTTeMn8AgyVOqC9RCk2aNV3r1xgKk1yvNsDOeOuTj61fF9JHiRPKSUnglpyDkiPXrdtElGFFoZMG4c3kVH1C-u6wnsDYhuUhaSIeT85d2wm-Zv57twUrVXDuRx_TnPxi2zns0naYUHKzITxPlgrU7c1LU3E7ckg-0N-Hu7nYR4wp08c5Zea_gl0k"/>
+</div>
+</div>
+<!-- Mode 5: Guild -->
+<div class="md:col-span-3 group bg-surface-container-lowest rounded-lg border border-[#E5DCFF] p-8 shadow-sm flex flex-col md:flex-row gap-8 hover:shadow-xl transition-all duration-500 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-[#00BCD4]"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-[#00BCD4] text-4xl mb-4" data-icon="fort">fort</span>
+<h3 class="text-2xl font-bold font-headline mb-3">🏰 ギルド</h3>
+<p class="text-on-surface-variant leading-relaxed">複数人で共有するペルソナ管理。プロジェクトメンバーや共通の知人を「ギルド」としてオーガナイズ。</p>
+</div>
+<div class="w-full md:w-48 transform group-hover:translate-x-2 transition-transform">
+<img alt="Guild Mode" class="rounded-lg h-full object-cover" data-alt="teal glowing futuristic castle structure with clean geometric lines and soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMdsefB05MHdlyATJUTKmR7grhF_2qVZ9RWpXAKdrFkcfo6KDSQR0Lm00Tnvuy5qLXl83zMbneRJuaQTLMKkiDC8ZPcHAQmzYMSp9fsE8ILcke1TpJWheJmwio7dds_a7ZIosAjXPbQ3pWMun5o5vgXnNQfxORKSz1NCmeJ5TELICklRt65kh8I_0cXQrjbeZIohMvBn1uCN5FNRQavseZn9y8XIihO0Xtsh9ZobxDBDKMn4pHBCEr5-hK9cVdd6UqohSSuffQCdI"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Section -->
+<section class="py-24 px-8 md:px-20 bg-[#F0EEFF]">
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<div class="mb-12 relative">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150"></div>
+<span class="material-symbols-outlined text-[120px] text-primary relative z-10" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-6 text-on-background">あなたのデータは、あなただけのもの。</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl mb-16">
+                    Persomaidは、個人の尊厳を守るために設計されました。全てのデータ処理はあなたのデバイス上で行われ、私たちは一切の関与をしません。
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="no_sim">no_sim</span>
+<h4 class="text-xl font-bold mb-4">📵 サーバーレス</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">全てのペルソナデータはクラウドではなく、あなたのスマートフォンのみに暗号化されて保存されます。</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="lock">lock</span>
+<h4 class="text-xl font-bold mb-4">🔒 収集ゼロ</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">利用規約に基づき、解析データや利用統計を外部に送信することはありません。完全にプライベートです。</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-4xl text-error mb-6" data-icon="delete_forever">delete_forever</span>
+<h4 class="text-xl font-bold mb-4">🗑 完全削除</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">アプリを削除すれば、全てのデータは永久に抹消されます。データの痕跡を残さない、クリーンな設計。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 md:px-20 bg-background relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-6xl font-headline font-bold mb-10 leading-tight">冒険の準備は、<br/>できていますか？</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-primary hover:bg-primary-container text-white px-10 py-5 rounded-full flex items-center justify-center gap-4 transition-all duration-300 shadow-2xl shadow-primary/30">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<div class="text-left">
+<div class="text-[10px] opacity-80 leading-none">Download on the</div>
+<div class="text-lg font-bold leading-none">App Store</div>
+</div>
+</button>
+<button class="bg-on-background hover:bg-on-surface text-white px-10 py-5 rounded-full flex items-center justify-center gap-4 transition-all duration-300 shadow-2xl shadow-black/20">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+<div class="text-left">
+<div class="text-[10px] opacity-80 leading-none">Get it on</div>
+<div class="text-lg font-bold leading-none">Google Play</div>
+</div>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#E5DCFF] dark:border-slate-800 bg-white dark:bg-slate-950 font-['Manrope'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full max-w-7xl mx-auto">
+<div class="text-slate-500 dark:text-slate-400 mb-4 md:mb-0">
+                © 2026 tntinfo
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#006876] transition-colors opacity-80 hover:opacity-100" href="#">利用規約</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#006876] transition-colors opacity-80 hover:opacity-100" href="#">プライバシーポリシー</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#006876] transition-colors opacity-80 hover:opacity-100 font-semibold text-[#622fe5]" href="#">お問い合わせ</a>
+</div>
+</div>
+</footer>
+</body></html>

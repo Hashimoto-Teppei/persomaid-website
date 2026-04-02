@@ -1,11 +1,21 @@
 {
   "editor.defaultFormatter": "biomejs.biome",
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
   },
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
       "file": ".vscode/commit-message-instructions.md"
     }
-  ]
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
 }

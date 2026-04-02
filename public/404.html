@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA fallback
+      // パスを sessionStorage に保存してサイトルートへリダイレクトする。
+      // index.html 側でパスを復元し、React Router が正しいページを表示する。
+      sessionStorage.setItem("spa_redirect", location.href)
+    </script>
+    <meta http-equiv="refresh" content="0;URL='./'">
+  </head>
+  <body></body>
+</html>

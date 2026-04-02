@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["src/**/*.{ts,tsx,js,jsx}"]
+    "includes": ["src/**/*.{ts,tsx,js,jsx}", ".vscode/settings.json"]
   },
   "formatter": {
     "enabled": true,
