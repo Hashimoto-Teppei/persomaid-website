@@ -20,7 +20,9 @@ const SECTIONS = [
     title: "ご利用条件",
     content: (
       <div className="space-y-3">
-        <p className="text-pm-subtext leading-relaxed">本アプリをご利用いただくにあたり、以下の条件を確認してください。</p>
+        <p className="text-pm-subtext leading-relaxed">
+          本アプリをご利用いただくにあたり、以下の条件を確認してください。
+        </p>
         <ul className="space-y-3">
           {[
             "本アプリは個人利用を目的として提供されています",
@@ -29,7 +31,10 @@ const SECTIONS = [
             "本アプリに記録するコンテンツの内容に関するすべての責任はお客様にあります",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 text-pm-subtext">
-              <span className="material-symbols-outlined text-pm-primary text-sm mt-0.5 shrink-0" aria-hidden="true">
+              <span
+                className="material-symbols-outlined text-pm-primary text-sm mt-0.5 shrink-0"
+                aria-hidden="true"
+              >
                 arrow_forward_ios
               </span>
               {item}
@@ -53,7 +58,10 @@ const SECTIONS = [
           "その他、当方が不適切と判断する行為",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3 text-pm-subtext">
-            <span className="material-symbols-outlined text-[#F44336] text-sm mt-0.5 shrink-0" aria-hidden="true">
+            <span
+              className="material-symbols-outlined text-[#F44336] text-sm mt-0.5 shrink-0"
+              aria-hidden="true"
+            >
               do_not_disturb_on
             </span>
             {item}
@@ -79,7 +87,10 @@ const SECTIONS = [
             "OSのアップデート等による互換性の問題",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 text-pm-subtext">
-              <span className="material-symbols-outlined text-pm-outline text-sm mt-0.5 shrink-0" aria-hidden="true">
+              <span
+                className="material-symbols-outlined text-pm-outline text-sm mt-0.5 shrink-0"
+                aria-hidden="true"
+              >
                 info
               </span>
               {item}
@@ -143,9 +154,19 @@ const SECTIONS = [
           href="mailto:tntinfo.app@gmail.com"
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pm-surface-low border border-pm-border text-pm-primary font-body font-bold hover:bg-pm-primary-fixed transition-colors"
         >
-          <span className="material-symbols-outlined text-sm" aria-hidden="true">mail</span>
+          <span
+            className="material-symbols-outlined text-sm"
+            aria-hidden="true"
+          >
+            mail
+          </span>
           tntinfo.app@gmail.com
-          <span className="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
+          <span
+            className="material-symbols-outlined text-sm"
+            aria-hidden="true"
+          >
+            open_in_new
+          </span>
         </a>
       </div>
     ),
@@ -159,9 +180,15 @@ export function TermsPage() {
 
       {/* ── Header ─────────────────────────────── */}
       <div className="pt-16 pb-12 px-6 md:px-10 relative overflow-hidden bg-pm-section-alt">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pm-primary/6 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+        <div
+          className="absolute top-0 left-1/4 w-96 h-96 bg-pm-primary/6 rounded-full blur-[120px] pointer-events-none"
+          aria-hidden="true"
+        />
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-[1rem] bg-pm-primary shadow-rpg-lg mb-2" aria-hidden="true">
+          <div
+            className="inline-flex items-center justify-center w-16 h-16 rounded-[1rem] bg-pm-primary shadow-rpg-lg mb-2"
+            aria-hidden="true"
+          >
             <span className="material-symbols-outlined icon-filled text-white text-3xl">
               gavel
             </span>
@@ -191,7 +218,12 @@ export function TermsPage() {
                     {section.num}
                   </span>
                   <h2 className="text-xl font-heading font-bold text-pm-text flex items-center gap-2">
-                    <span className="material-symbols-outlined text-pm-primary text-xl" aria-hidden="true">{section.icon}</span>
+                    <span
+                      className="material-symbols-outlined text-pm-primary text-xl"
+                      aria-hidden="true"
+                    >
+                      {section.icon}
+                    </span>
                     {section.title}
                   </h2>
                 </div>

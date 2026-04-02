@@ -1,6 +1,6 @@
 import { Link } from "react-router"
-import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export function NotFoundPage() {
   return (
@@ -10,7 +10,10 @@ export function NotFoundPage() {
       <main className="flex-1 flex items-center justify-center px-6 py-24">
         <div className="text-center space-y-8 max-w-md">
           {/* Icon */}
-          <div className="w-24 h-24 bg-pm-primary rounded-[1.8rem] mx-auto flex items-center justify-center shadow-rpg-lg animate-float" aria-hidden="true">
+          <div
+            className="w-24 h-24 bg-pm-primary rounded-[1.8rem] mx-auto flex items-center justify-center shadow-rpg-lg animate-float"
+            aria-hidden="true"
+          >
             <span className="material-symbols-outlined icon-filled text-white text-5xl">
               search_off
             </span>
@@ -34,7 +37,10 @@ export function NotFoundPage() {
             to="/"
             className="inline-flex items-center gap-2 bg-pm-primary text-white px-8 py-4 rounded-full font-heading font-bold shadow-rpg-lg hover:opacity-90 transition-opacity"
           >
-            <span className="material-symbols-outlined icon-filled text-xl" aria-hidden="true">
+            <span
+              className="material-symbols-outlined icon-filled text-xl"
+              aria-hidden="true"
+            >
               home
             </span>
             トップへ戻る

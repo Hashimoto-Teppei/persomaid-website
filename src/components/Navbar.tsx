@@ -33,7 +33,12 @@ export function Navbar() {
           className="flex items-center gap-2"
           aria-label="Persomaid トップへ"
         >
-          <img src={appIcon} alt="" aria-hidden="true" className="w-8 h-8 rounded-lg" />
+          <img
+            src={appIcon}
+            alt=""
+            aria-hidden="true"
+            className="w-8 h-8 rounded-lg"
+          />
           <span className="text-2xl font-black gradient-text font-heading tracking-tight">
             Persomaid
           </span>

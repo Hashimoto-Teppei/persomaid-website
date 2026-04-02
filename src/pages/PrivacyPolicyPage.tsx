@@ -34,7 +34,12 @@ const SECTIONS = [
               key={label}
               className="flex items-center gap-3 bg-pm-surface-low p-3 rounded-xl border border-pm-border"
             >
-              <span className="material-symbols-outlined text-[#00BCD4] text-sm" aria-hidden="true">{icon}</span>
+              <span
+                className="material-symbols-outlined text-[#00BCD4] text-sm"
+                aria-hidden="true"
+              >
+                {icon}
+              </span>
               <span className="text-xs font-heading font-bold uppercase tracking-wider text-pm-subtext">
                 {label}
               </span>
@@ -51,7 +56,8 @@ const SECTIONS = [
     content: (
       <p className="text-pm-subtext leading-relaxed">
         本アプリ内で作成したすべてのデータ（ペルソナ・グループ・関連情報等）は、
-        お客様のデバイス内のローカル <span className="font-mono font-bold text-pm-primary">SQLite</span>{" "}
+        お客様のデバイス内のローカル{" "}
+        <span className="font-mono font-bold text-pm-primary">SQLite</span>{" "}
         データベースにのみ保存されます。
         これらのデータが外部のサーバーやクラウドサービスにアップロードされることは一切ありません。
         データへのアクセスは、本アプリを通じてのみ可能です。
@@ -97,9 +103,19 @@ const SECTIONS = [
           href="mailto:tntinfo.app@gmail.com"
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pm-surface-low border border-pm-border text-pm-primary font-body font-bold hover:bg-pm-primary-fixed transition-colors"
         >
-          <span className="material-symbols-outlined text-sm" aria-hidden="true">mail</span>
+          <span
+            className="material-symbols-outlined text-sm"
+            aria-hidden="true"
+          >
+            mail
+          </span>
           tntinfo.app@gmail.com
-          <span className="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
+          <span
+            className="material-symbols-outlined text-sm"
+            aria-hidden="true"
+          >
+            open_in_new
+          </span>
         </a>
       </div>
     ),
@@ -113,9 +129,15 @@ export function PrivacyPolicyPage() {
 
       {/* ── Header ─────────────────────────────── */}
       <div className="pt-16 pb-12 px-6 md:px-10 relative overflow-hidden bg-pm-section-alt">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pm-primary/6 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+        <div
+          className="absolute top-0 right-1/4 w-96 h-96 bg-pm-primary/6 rounded-full blur-[120px] pointer-events-none"
+          aria-hidden="true"
+        />
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-[1rem] bg-pm-primary shadow-rpg-lg mb-2" aria-hidden="true">
+          <div
+            className="inline-flex items-center justify-center w-16 h-16 rounded-[1rem] bg-pm-primary shadow-rpg-lg mb-2"
+            aria-hidden="true"
+          >
             <span className="material-symbols-outlined icon-filled text-white text-3xl">
               shield_lock
             </span>
@@ -145,7 +167,12 @@ export function PrivacyPolicyPage() {
                     {section.num}
                   </span>
                   <h2 className="text-xl font-heading font-bold text-pm-text flex items-center gap-2">
-                    <span className="material-symbols-outlined text-pm-primary text-xl" aria-hidden="true">{section.icon}</span>
+                    <span
+                      className="material-symbols-outlined text-pm-primary text-xl"
+                      aria-hidden="true"
+                    >
+                      {section.icon}
+                    </span>
                     {section.title}
                   </h2>
                 </div>

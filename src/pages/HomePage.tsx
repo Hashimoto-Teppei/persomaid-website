@@ -1,8 +1,9 @@
+import appIcon from "../assets/Persomaid_AppIcon.png"
+import screenshotMachikonInput from "../assets/Screenshot_街コンモード_入力.png"
+import screenshotMachikon from "../assets/Screenshot_街コンモード＿トップ.png"
+import { AppDownloadButtons } from "../components/AppDownloadButtons"
 import { Footer } from "../components/Footer"
 import { Navbar } from "../components/Navbar"
-import appIcon from "../assets/Persomaid_AppIcon.png"
-import screenshotMachikon from "../assets/Screenshot_街コンモード＿トップ.png"
-import screenshotMachikonInput from "../assets/Screenshot_街コンモード_入力.png"
 
 const STAT_BARS = [
   { w: "75%", color: "#622FE5", label: "stat-primary" },
@@ -113,31 +114,9 @@ export function HomePage() {
               すべてのデータはデバイス内に、完全プライベートで。
             </p>
 
-            {/* CTA buttons — Coming Soon */}
-            <div className="flex flex-wrap gap-4 pt-2">
-              <button
-                type="button"
-                disabled
-                className="bg-pm-primary text-white px-8 py-4 rounded-full font-heading font-bold flex items-center gap-3 shadow-rpg-lg min-w-55 justify-center opacity-60 cursor-not-allowed"
-              >
-                <span
-                  className="material-symbols-outlined icon-filled"
-                  aria-hidden="true"
-                >
-                  ios
-                </span>
-                App Store でダウンロード
-              </button>
-              <button
-                type="button"
-                disabled
-                className="bg-white border-2 border-pm-outline text-pm-text px-8 py-4 rounded-full font-heading font-bold flex items-center gap-3 min-w-55 justify-center opacity-60 cursor-not-allowed"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">
-                  play_apps
-                </span>
-                Google Play でダウンロード
-              </button>
+            {/* CTA buttons */}
+            <div className="pt-2">
+              <AppDownloadButtons />
             </div>
 
             {/* Feature chips */}
@@ -461,21 +440,8 @@ export function HomePage() {
               今すぐ Persomaid
               をダウンロードして、新しい管理体験を始めましょう。
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                type="button"
-                disabled
-                className="bg-white text-pm-primary px-10 py-4 rounded-full font-heading font-bold shadow-lg opacity-60 cursor-not-allowed"
-              >
-                App Store でダウンロード
-              </button>
-              <button
-                type="button"
-                disabled
-                className="bg-white/20 border border-white/30 text-white px-10 py-4 rounded-full font-heading font-bold opacity-60 cursor-not-allowed"
-              >
-                Google Play でダウンロード
-              </button>
+            <div className="flex justify-center">
+              <AppDownloadButtons />
             </div>
           </div>
         </div>

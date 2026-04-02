@@ -7,7 +7,12 @@ export function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 max-w-7xl mx-auto gap-4">
         {/* Brand */}
         <div className="text-lg font-black gradient-text font-heading tracking-tight flex items-center gap-2">
-          <img src={appIcon} alt="" aria-hidden="true" className="w-6 h-6 rounded-md" />
+          <img
+            src={appIcon}
+            alt=""
+            aria-hidden="true"
+            className="w-6 h-6 rounded-md"
+          />
           Persomaid
         </div>
 
@@ -34,9 +39,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-pm-subtext text-sm font-body">
-          © 2026 tntinfo
-        </div>
+        <div className="text-pm-subtext text-sm font-body">© 2026 tntinfo</div>
       </div>
     </footer>
   )
