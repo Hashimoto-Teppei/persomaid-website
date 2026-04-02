@@ -47,4 +47,6 @@ Use the `cn()` utility from `@/lib/utils` for conditional class merging (wraps `
 
 ## Project Context
 
-This is the website for the Persomaid app. The mobile app lives in `../persomaid/`. Refer to `../persomaid/docs/` for product overview, design language (dark theme, neon accents, game character-maker aesthetic), and feature descriptions when building UI content.
+This is the website for the Persomaid app. The mobile app lives in `../persomaid/`.
+
+UI構築に Stitch MCP を使う場合は、ルートの `../CLAUDE.md` の「Design Workflow」セクションを参照。
