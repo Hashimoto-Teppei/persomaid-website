@@ -8,7 +8,7 @@ const SECTIONS = [
     title: "適用範囲",
     content: (
       <p className="text-pm-subtext leading-relaxed">
-        本利用規約（以下「本規約」）は、tntinfo（以下「当方」）が提供するスマートフォンアプリ「Persomaid」
+        本利用規約（以下「本規約」）は、株式会社TNT情報サービス（以下「当方」）が提供するスマートフォンアプリ「Persomaid」
         （以下「本アプリ」）のご利用に関して適用されます。本アプリをダウンロード・インストール・利用した時点で、
         本規約に同意したものとみなします。
       </p>
@@ -146,29 +146,10 @@ const SECTIONS = [
     icon: "alternate_email",
     title: "お問い合わせ",
     content: (
-      <div className="space-y-3">
-        <p className="text-pm-subtext leading-relaxed">
-          本規約に関するご質問やご不明な点がございましたら、下記の連絡先までお問い合わせください。
-        </p>
-        <a
-          href="mailto:tntinfo.app@gmail.com"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pm-surface-low border border-pm-border text-pm-primary font-body font-bold hover:bg-pm-primary-fixed transition-colors"
-        >
-          <span
-            className="material-symbols-outlined text-sm"
-            aria-hidden="true"
-          >
-            mail
-          </span>
-          tntinfo.app@gmail.com
-          <span
-            className="material-symbols-outlined text-sm"
-            aria-hidden="true"
-          >
-            open_in_new
-          </span>
-        </a>
-      </div>
+      <p className="text-pm-subtext leading-relaxed">
+        本規約に関するご質問やご不明な点がございましたら、
+        アプリストアのレビュー欄またはサポートページよりお問い合わせください。
+      </p>
     ),
   },
 ]

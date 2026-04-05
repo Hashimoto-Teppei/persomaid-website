@@ -94,30 +94,10 @@ const SECTIONS = [
     icon: "alternate_email",
     title: "お問い合わせ",
     content: (
-      <div className="space-y-3">
-        <p className="text-pm-subtext leading-relaxed">
-          本プライバシーポリシーに関するご質問やご不明な点がございましたら、
-          下記の連絡先までお気軽にお問い合わせください。
-        </p>
-        <a
-          href="mailto:tntinfo.app@gmail.com"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pm-surface-low border border-pm-border text-pm-primary font-body font-bold hover:bg-pm-primary-fixed transition-colors"
-        >
-          <span
-            className="material-symbols-outlined text-sm"
-            aria-hidden="true"
-          >
-            mail
-          </span>
-          tntinfo.app@gmail.com
-          <span
-            className="material-symbols-outlined text-sm"
-            aria-hidden="true"
-          >
-            open_in_new
-          </span>
-        </a>
-      </div>
+      <p className="text-pm-subtext leading-relaxed">
+        本プライバシーポリシーに関するご質問やご不明な点がございましたら、
+        アプリストアのレビュー欄またはサポートページよりお問い合わせください。
+      </p>
     ),
   },
 ]
