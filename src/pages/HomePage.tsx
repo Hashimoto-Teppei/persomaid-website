@@ -11,41 +11,63 @@ const STAT_BARS = [
   { w: "55%", color: "#FF9500", label: "stat-tertiary" },
 ]
 
-const MODES = [
+const MODE_CATEGORIES = [
   {
-    emoji: "⚡",
-    name: "スカウター",
-    desc: "短時間でサクッとスキャン。第一印象や最低限のステータスを即座に記録します。",
-    accent: "#FF9500",
-    colSpan: "md:col-span-2",
+    category: "出会いの場で使う",
+    modes: [
+      {
+        emoji: "🔍",
+        name: "スカウター",
+        desc: "素早く第一印象をスキャン。短時間で複数人の基本ステータスを即座に記録。",
+        accent: "#FF9500",
+      },
+      {
+        emoji: "🏟️",
+        name: "街コン",
+        desc: "3フェーズの会話アドバイザーでアイスブレイクをサポート。会話後にそのまま記録へ。",
+        accent: "#FF6B35",
+      },
+      {
+        emoji: "💬",
+        name: "合コン",
+        desc: "4フェーズで自己紹介から本音トークまで丁寧にサポート。恋愛観やMBTIも記録。",
+        accent: "#E91E8C",
+      },
+    ],
   },
   {
-    emoji: "🗡",
-    name: "クエスト",
-    desc: "会話をミッションに変える。相手の話した内容をタスクや達成目標としてアーカイブ。",
-    accent: "#00C853",
-    colSpan: "md:col-span-2",
+    category: "じっくり記録する",
+    modes: [
+      {
+        emoji: "⚔️",
+        name: "クエスト",
+        desc: "会話をミッションに変えるRPG風モード。段階的なクエストで情報収集を楽しく。",
+        accent: "#00C853",
+      },
+      {
+        emoji: "🎮",
+        name: "キャラメイク",
+        desc: "全属性を自由に設定するフル編集モード。外見・性格・背景まで完璧なプロファイルを。",
+        accent: "#7B4FFF",
+      },
+      {
+        emoji: "📋",
+        name: "プロファイリング",
+        desc: "機密ファイル風に事前情報を整理。対面前にわかっているデータを集約して戦略的に。",
+        accent: "#F44336",
+      },
+    ],
   },
   {
-    emoji: "🎮",
-    name: "キャラメイク",
-    desc: "全項目をじっくり入力。外見、スキル、性格、背景まで完璧なプロファイルを作成。",
-    accent: "#7B4FFF",
-    colSpan: "md:col-span-2",
-  },
-  {
-    emoji: "🔍",
-    name: "プロファイリング",
-    desc: "事前情報を機密ファイルに整理。対面前にわかっているデータを集約し、戦略的な出会いを支援。",
-    accent: "#F44336",
-    colSpan: "md:col-span-3",
-  },
-  {
-    emoji: "🏰",
-    name: "ギルド",
-    desc: "チームをまとめて編成。コミュニティや組織ごとにキャラクターをグループ分けして管理。",
-    accent: "#00BCD4",
-    colSpan: "md:col-span-3",
+    category: "チームで使う",
+    modes: [
+      {
+        emoji: "👥",
+        name: "ギルド",
+        desc: "チーム・グループ単位で一括作成。コミュニティや組織ごとにキャラクターをまとめて管理。",
+        accent: "#00BCD4",
+      },
+    ],
   },
 ]
 
@@ -271,29 +293,47 @@ export function HomePage() {
               </span>
             </div>
             <h2 className="font-heading font-bold text-4xl lg:text-5xl text-pm-text">
-              5つの作成モード
+              7つの作成モード
             </h2>
             <p className="text-pm-subtext mt-4 max-w-xl mx-auto">
-              あなたのシチュエーションに合わせて選べる5つのコア。RPGのように楽しみながら出会いを記録。
+              シチュエーションに合わせて選べる7つのモード。RPGのように楽しみながら出会いを記録。
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-5">
-            {MODES.map((mode) => (
-              <div
-                key={mode.name}
-                className={`mode-card ${mode.colSpan} shadow-rpg border-l-4 p-8`}
-                style={{ borderLeftColor: mode.accent }}
-              >
-                <div className="text-4xl mb-4" aria-hidden="true">
-                  {mode.emoji}
+          <div className="space-y-10">
+            {MODE_CATEGORIES.map((cat) => (
+              <div key={cat.category} className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="font-heading font-bold text-xs text-pm-subtext uppercase tracking-widest whitespace-nowrap">
+                    {cat.category}
+                  </span>
+                  <div className="flex-1 h-px bg-pm-border" aria-hidden="true" />
                 </div>
-                <h3 className="font-heading font-bold text-xl mb-2 text-pm-text">
-                  {mode.name}
-                </h3>
-                <p className="text-pm-subtext leading-relaxed text-sm">
-                  {mode.desc}
-                </p>
+                <div
+                  className={`grid gap-4 grid-cols-1 ${
+                    cat.modes.length === 1
+                      ? "md:grid-cols-3"
+                      : "md:grid-cols-3"
+                  }`}
+                >
+                  {cat.modes.map((mode) => (
+                    <div
+                      key={mode.name}
+                      className="mode-card border-l-4 p-7 shadow-rpg"
+                      style={{ borderLeftColor: mode.accent }}
+                    >
+                      <div className="text-3xl mb-3" aria-hidden="true">
+                        {mode.emoji}
+                      </div>
+                      <h3 className="font-heading font-bold text-lg mb-2 text-pm-text">
+                        {mode.name}
+                      </h3>
+                      <p className="text-pm-subtext leading-relaxed text-sm">
+                        {mode.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

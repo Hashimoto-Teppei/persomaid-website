@@ -30,16 +30,12 @@ export function Footer() {
           >
             プライバシーポリシー
           </Link>
-          <a
-            href="mailto:tntinfo.app@gmail.com"
-            className="text-pm-subtext hover:text-pm-primary transition-colors duration-200 text-sm font-body hover:underline"
-          >
-            お問い合わせ
-          </a>
         </div>
 
         {/* Copyright */}
-        <div className="text-pm-subtext text-sm font-body">© 2026 tntinfo</div>
+        <div className="text-pm-subtext text-sm font-body">
+          © 2026 株式会社TNT情報サービス
+        </div>
       </div>
     </footer>
   )
